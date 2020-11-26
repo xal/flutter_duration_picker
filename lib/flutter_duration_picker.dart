@@ -374,7 +374,7 @@ class _DialState extends State<_Dial> with SingleTickerProviderStateMixin {
 
   int _minuteHand(double angle) {
     // Result is in [0; 59], even if overall time is >= 1 hour
-    return (_angleToMinutes(angle) % 60.0).toInt();
+    return (_angleToMinutes(angle) % 60.0).ceil().toInt();
   }
 
   Duration _angleToDuration(double angle) {
