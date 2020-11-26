@@ -383,7 +383,7 @@ class _DialState extends State<_Dial> with SingleTickerProviderStateMixin {
 
   Duration _minutesToDuration(minutes) {
     return Duration(
-        hours: (minutes ~/ 60).toInt(), minutes: (minutes % 60.0).toInt());
+        hours: (minutes ~/ 60).toInt(), minutes: (minutes % 60.0).floor().toInt());
   }
 
   double _angleToMinutes(double angle) {
